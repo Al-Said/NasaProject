@@ -23,6 +23,11 @@ class FilterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if traitCollection.userInterfaceStyle == .dark {
+            self.pickerHolderView.backgroundColor = .darkGray
+        } else {
+            self.pickerHolderView.backgroundColor = .white
+        }
         setCornerRadius()
         setData()
         setPickerView()

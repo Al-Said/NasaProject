@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F168DFE25DC6E8D00F1B315 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F168DFD25DC6E8D00F1B315 /* GoogleService-Info.plist */; };
 		2F6BF1CD25DC099C00760779 /* RoverPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6BF1CC25DC099C00760779 /* RoverPhotoManager.swift */; };
 		2F6BF1D925DC157200760779 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6BF1D825DC157100760779 /* PhotoDetailViewController.swift */; };
 		2F6BF1DC25DC282200760779 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6BF1DB25DC282200760779 /* FilterViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F168DFD25DC6E8D00F1B315 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2F6BF1CC25DC099C00760779 /* RoverPhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverPhotoManager.swift; sourceTree = "<group>"; };
 		2F6BF1D825DC157100760779 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		2F6BF1DB25DC282200760779 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				2FE2701225DBDF0C0011060C /* Storyboards */,
 				2FFC54E325DC501600237E2C /* Media */,
 				2FE26FF825DBCFA80011060C /* Info.plist */,
+				2F168DFD25DC6E8D00F1B315 /* GoogleService-Info.plist */,
 			);
 			path = NASA_Project;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				2FE26FE425DBCFA30011060C /* Frameworks */,
 				2FE26FE525DBCFA30011060C /* Resources */,
 				937328A282A61AB496866063 /* [CP] Embed Pods Frameworks */,
+				2F168E2825DC714700F1B315 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -242,12 +246,30 @@
 				2FE26FF725DBCFA80011060C /* LaunchScreen.storyboard in Resources */,
 				2FE26FF425DBCFA80011060C /* Assets.xcassets in Resources */,
 				2FE26FF225DBCFA40011060C /* Main.storyboard in Resources */,
+				2F168DFE25DC6E8D00F1B315 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2F168E2825DC714700F1B315 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 		2FEAD36606FF1DBA0A0C548B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
