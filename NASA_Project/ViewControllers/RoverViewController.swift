@@ -51,7 +51,8 @@ class RoverViewController: BaseViewController {
             self.stopActivityIndicator()
             self.data = response.photos
         } failure: { (code, message) in
-            print("Error code: \(code)... \(message)")
+            self.stopActivityIndicator()
+            self.showInfoPopup(title: "Error", message: "Error code: \(code)... \(message)", buttonText: "OK")
         }
     }
     
@@ -105,7 +106,7 @@ extension RoverViewController: UITableViewDelegate, UITableViewDataSource, UIScr
             viewController.data = data[indexPath.row]
             self.navigationController?.pushViewController(viewController, animated: true)
         } else {
-            print("an error has occured")
+            self.showInfoPopup(title: "Error", message: "An error has occured", buttonText: "OK")
         }
     }
     
@@ -121,20 +122,17 @@ extension RoverViewController: UITableViewDelegate, UITableViewDataSource, UIScr
                 paginating = true
                 self.pageNumber += 1
                 let model = PhotoRequestModel(roverName: roverName, page: pageNumber, sol: 1000, camera: selectedCamera)
-                RoverPhotoManager.shared.getRoverPhotos(model) { (response) in
+                RoverPhotoManager.shared.getRoverPhotos(model) { [unowned self] (response) in
                     self.data.append(contentsOf: response.photos)
                     self.dataTableView.tableFooterView = nil
                     self.paginating = false
-                } failure: { (code, message) in
-                    print("Error code: \(code)... \(message)")
+                } failure: { [unowned self] (code, message) in
+                    self.showInfoPopup(title: "Error", message: "Error code: \(code)... \(message)", buttonText: "OK")
                     self.dataTableView.tableFooterView = nil
                     self.pageNumber -= 1
                     self.paginating = false
                 }
             }
-
-        } else {
-            //We are ok.
         }
     }
 }

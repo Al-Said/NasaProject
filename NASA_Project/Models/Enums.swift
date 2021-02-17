@@ -30,3 +30,5 @@ enum Camera: String {
     case PANCAM
     case MINITES
 }
+
+typealias NetworkError = (Int, String)
