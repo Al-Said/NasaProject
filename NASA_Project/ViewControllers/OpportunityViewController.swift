@@ -17,7 +17,6 @@ class OpportunityViewController: RoverViewController {
         setData()
     }
     
-    
     @objc override func filterCamera() {
         guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "FilterViewController") as? FilterViewController else {
             return

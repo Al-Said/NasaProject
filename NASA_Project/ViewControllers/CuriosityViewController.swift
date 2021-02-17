@@ -16,12 +16,7 @@ class CuriosityViewController: RoverViewController {
         startActivityIndicator()
         setData()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
-    }
-    
-    
+
     @objc override func filterCamera() {
         guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "FilterViewController") as? FilterViewController else {
             return
